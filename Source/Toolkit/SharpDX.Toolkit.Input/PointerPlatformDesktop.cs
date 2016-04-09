@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 using SharpDX.Mathematics;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
 using System;
 using System.Windows.Forms;
 using FKeys = System.Windows.Forms.Keys;

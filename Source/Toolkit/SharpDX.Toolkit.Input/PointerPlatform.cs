@@ -55,15 +55,15 @@ namespace SharpDX.Toolkit.Input
         /// <returns>The platform-specific instance.</returns>
         internal static PointerPlatform Create(object nativeWindow, PointerManager manager)
         {
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             if (nativeWindow is System.Windows.Forms.Control || nativeWindow is IntPtr)
                 return new PointerPlatformDesktop(nativeWindow, manager); // WinForms platform
-#if !W8CORE && NET35Plus && !DIRECTX11_1
+#if !W8CORE && !WINDOWS_UWP && NET35Plus && !DIRECTX11_1
             if (nativeWindow is SharpDXElement)
                 return new PointerPlatformDesktopWpf(nativeWindow, manager); // WPF platform
 #endif
             throw new ArgumentException("Unsupported window control.", "nativeWindow");
-#elif WIN8METRO
+#elif WIN8METRO || WINDOWS_UWP
             return new PointerPlatformWinRT(nativeWindow, manager);
 #elif WP8
             return new PointerPlatformWP8(nativeWindow, manager);

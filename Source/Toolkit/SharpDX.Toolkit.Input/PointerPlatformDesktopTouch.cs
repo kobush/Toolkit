@@ -20,7 +20,7 @@
 
 using SharpDX.Mathematics;
 using RectangleF = SharpDX.RectangleF;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
 using System;
 using System.Collections.Generic;
 using System.Drawing;

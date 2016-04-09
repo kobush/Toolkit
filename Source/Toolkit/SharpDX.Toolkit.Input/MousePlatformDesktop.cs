@@ -22,7 +22,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using SharpDX.Mathematics;
 
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
 
 namespace SharpDX.Toolkit.Input
 {

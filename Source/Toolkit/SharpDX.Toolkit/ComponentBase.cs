@@ -84,7 +84,7 @@ namespace SharpDX.Toolkit
         /// Gets or sets the tag associated to this object.
         /// </summary>
         /// <value>The tag.</value>
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
         [Browsable(false)]
 #endif
         [DefaultValue(null)]

@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 using Rectangle = SharpDX.Rectangle;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
 using System;
 using System.Threading;
 using System.Diagnostics;

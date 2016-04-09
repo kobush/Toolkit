@@ -42,7 +42,7 @@ namespace SharpDX.Toolkit
         /// <param name="text">The text.</param>
         public SingletonString(string text) : this()
         {
-#if W8CORE
+#if W8CORE || WINDOWS_UWP
             this.text = text;
 #else
             this.text = string.Intern(text);

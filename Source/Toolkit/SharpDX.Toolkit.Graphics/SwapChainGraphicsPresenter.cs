@@ -21,7 +21,7 @@
 using System;
 using SharpDX.Mathematics;
 using SharpDX.Mathematics.Interop;
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
 using Windows.UI.Core;
 using Windows.Graphics.Display;
 using Windows.UI.Xaml.Controls;
@@ -84,7 +84,7 @@ namespace SharpDX.Toolkit.Graphics
         {
             get
             {
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
                 return true;
 #else
                 return swapChain.IsFullScreen;
@@ -93,7 +93,7 @@ namespace SharpDX.Toolkit.Graphics
 
             set
             {
-#if !WIN8METRO
+#if !WIN8METRO && !WINDOWS_UWP
                 if(swapChain == null)
                     return;
                 
@@ -179,12 +179,11 @@ namespace SharpDX.Toolkit.Graphics
 
             RemoveAndDispose(ref backBuffer);
 
-#if DIRECTX11_2 && WIN8METRO
+#if DIRECTX11_2 && (WIN8METRO || WINDOWS_UWP)
             var swapChainPanel = Description.DeviceWindowHandle as SwapChainPanel;
             if (swapChainPanel != null && swapChain2 != null)
             {
-
-                swapChain2.MatrixTransform = Matrix3x2.Scaling(1f / swapChainPanel.CompositionScaleX, 1f / swapChainPanel.CompositionScaleY);
+                                        swapChain2.MatrixTransform = Matrix3x2.Scaling(1f / swapChainPanel.CompositionScaleX, 1f / swapChainPanel.CompositionScaleY);
             }
 #endif
 
@@ -207,14 +206,14 @@ namespace SharpDX.Toolkit.Graphics
                 throw new ArgumentException("DeviceWindowHandle cannot be null");
             }
 
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
             return CreateSwapChainForWinRT();
 #else
             return CreateSwapChainForDesktop();
 #endif
         }
 
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
         private SwapChain CreateSwapChainForWinRT()
         {
             var coreWindow = Description.DeviceWindowHandle as CoreWindow;

@@ -23,6 +23,7 @@ using SharpDX.Direct3D11;
 using System;
 using System.Collections.Generic;
 using SharpDX.Mathematics;
+using SharpDX.Mathematics.Interop;
 using SharpDX.Toolkit.Collections;
 using Device = SharpDX.Direct3D11.Device;
 
@@ -1085,10 +1086,14 @@ namespace SharpDX.Toolkit.Graphics
         /// <unmanaged-short>ID3D11DeviceContext::RSSetViewports</unmanaged-short>	
         public void SetViewports(params ViewportF[] viewports)
         {
+            var rawViewports = new RawViewportF[viewports.Length];
             for (int i = 0; i < viewports.Length; i++)
+            {
                 this.viewports[i] = viewports[i];
+                rawViewports[i] = viewports[i];
+            }
 
-            RasterizerStage.SetViewports(Array.ConvertAll(this.viewports, vp => (Mathematics.Interop.RawViewportF)vp), viewports.Length);
+            RasterizerStage.SetViewports(rawViewports, rawViewports.Length);
         }
 
         /// <summary>
@@ -1461,7 +1466,7 @@ namespace SharpDX.Toolkit.Graphics
                 {
 
                     // Invalid for WinRT - throwing a "Value does not fall within the expected range" Exception
-#if !WIN8METRO
+#if !WIN8METRO && !WINDOWS_UWP
                     // Make sure that the Presenter is reverted to window before shutting down
                     // otherwise the Direct3D11.Device will generate an exception on Dispose()
                     Presenter.IsFullScreen = false;

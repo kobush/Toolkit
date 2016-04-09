@@ -380,7 +380,7 @@ namespace SharpDX.Toolkit.Content
                         // Else tries to get a ContentReaderAttribute to resolve the type
                         if (contentReader == null)
                         {
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
                             var contentReaderAttribute = Utilities.GetCustomAttribute<ContentReaderAttribute>(assetType.GetTypeInfo(), true);
 #else
                             var contentReaderAttribute = Utilities.GetCustomAttribute<ContentReaderAttribute>(assetType, true);

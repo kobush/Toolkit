@@ -49,7 +49,7 @@ namespace SharpDX.Toolkit
 
         private bool deviceSettingsChanged;
 
-        private FeatureLevel preferredGraphicsProfile;
+        //private FeatureLevel preferredGraphicsProfile;
 
         private bool isFullScreen;
 
@@ -475,7 +475,11 @@ namespace SharpDX.Toolkit
 
                     break;
                 default:
+#if !WINDOWS_UWP
                     System.Threading.Thread.Sleep(TimeSpan.FromMilliseconds(20));
+#else
+                    new System.Threading.ManualResetEvent(false).WaitOne(TimeSpan.FromMilliseconds(20));
+#endif
                     try
                     {
                         OnDeviceLost(this, EventArgs.Empty);

@@ -22,13 +22,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-#if W8CORE
+#if W8CORE 
 using SharpDX.Text;
 #endif
 using System.Text.RegularExpressions;
 
 using SharpDX.Direct3D11;
 using SharpDX.Toolkit.Serialization;
+using ASCIIEncoding = System.Text.ASCIIEncoding;
 
 namespace SharpDX.Toolkit.Graphics
 {
@@ -36,7 +37,8 @@ namespace SharpDX.Toolkit.Graphics
     {
         private DataPointer sharedPtr;
 
-        public ModelReader(GraphicsDevice graphicsDevice, Stream stream, ModelMaterialTextureLoaderDelegate textureLoader) : base(stream, SerializerMode.Read, ASCIIEncoding.ASCII)
+        public ModelReader(GraphicsDevice graphicsDevice, Stream stream, ModelMaterialTextureLoaderDelegate textureLoader) 
+            : base(stream, SerializerMode.Read, ASCIIEncoding.ASCII)
         {
             if (graphicsDevice == null)
             {

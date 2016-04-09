@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 using SharpDX.Mathematics;
-#if !W8CORE && NET35Plus && !DIRECTX11_1
+#if !W8CORE && !WINDOWS_UWP && NET35Plus && !DIRECTX11_1
 using System;
 using System.Windows.Input;
 

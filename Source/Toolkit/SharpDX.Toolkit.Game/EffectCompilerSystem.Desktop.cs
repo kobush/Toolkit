@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 using System.Reflection;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
 using System;
 using System.IO;
 
@@ -31,15 +31,15 @@ namespace SharpDX.Toolkit
 {
     public partial class EffectCompilerSystem
     {
-        #region Fields
+#region Fields
 
         private readonly Dictionary<Effect, List<FileSystemWatcher>> effectsToWatcher = new Dictionary<Effect, List<FileSystemWatcher>>();
 
         private readonly Dictionary<FileSystemWatcher, List<Effect>> watcherToEffects = new Dictionary<FileSystemWatcher, List<Effect>>();
 
-        #endregion
+#endregion
 
-        #region Methods
+#region Methods
 
         private void InitializeCompiler()
         {
@@ -203,7 +203,7 @@ namespace SharpDX.Toolkit
             }
         }
 
-        #endregion
+#endregion
     }
 }
 #endif

@@ -564,7 +564,7 @@ namespace SharpDX.Toolkit.Graphics
             if (type == null)
                 throw new ArgumentNullException("type");
 
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
             if (!type.GetTypeInfo().IsValueType)
                 throw new ArgumentException("Type must be a value type");
 #else
@@ -574,7 +574,7 @@ namespace SharpDX.Toolkit.Graphics
 
             var vertexElements = new List<VertexElement>();
             var currentOffset = 0;
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
             foreach (var field in type.GetTypeInfo().DeclaredFields)
 #else
             foreach (var field in type.GetFields(BindingFlags.Instance | BindingFlags.Public))

@@ -21,6 +21,7 @@ Thumbs.db
 *.log
 *.orig
 [Bb]in
+obj
 [Dd]ebug*/
 *.lib
 *.sbr
@@ -32,3 +33,5 @@ Thumbs.db
 *.suo
 *.dotCover
 packages
+project.lock.json
+.vs

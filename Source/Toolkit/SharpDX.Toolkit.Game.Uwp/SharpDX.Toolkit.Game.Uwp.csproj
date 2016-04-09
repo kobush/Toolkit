@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4ABAA844-2FEB-48D1-9CAF-ED6D2A95BF37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpDX.Toolkit.Game</RootNamespace>
+    <AssemblyName>SharpDX.Toolkit.Game</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;DIRECTX11_1;DIRECTX11_2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;DIRECTX11_1;DIRECTX11_2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <DocumentationFile>bin\Release\SharpDX.Toolkit.Game.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\AnimationSystem.cs">
+      <Link>AnimationSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\AssemblyDoc.cs">
+      <Link>AssemblyDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Desktop\D3D11Image.cs">
+      <Link>Desktop\D3D11Image.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Desktop\GamePlatformDesktop.cs">
+      <Link>Desktop\GamePlatformDesktop.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Desktop\GameWindowDesktop.cs">
+      <Link>Desktop\GameWindowDesktop.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Desktop\GameWindowDesktopWpf.cs">
+      <Link>Desktop\GameWindowDesktopWpf.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Desktop\SharpDXElement.cs">
+      <Link>Desktop\SharpDXElement.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Desktop\ToolkitHwndHost.cs">
+      <Link>Desktop\ToolkitHwndHost.cs</Link>
+    </Compile>
+    <None Include="..\SharpDX.Toolkit.Game\Desktop\Win32Native.cs">
+      <Link>Desktop\Win32Native.cs</Link>
+    </None>
+    <Compile Include="..\SharpDX.Toolkit.Game\EffectCompilerEventArgs.cs">
+      <Link>EffectCompilerEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\EffectCompilerSystem.cs">
+      <Link>EffectCompilerSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\EffectCompilerSystem.Default.cs">
+      <Link>EffectCompilerSystem.Default.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\EffectCompilerSystem.Desktop.cs">
+      <Link>EffectCompilerSystem.Desktop.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Game.cs">
+      <Link>Game.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameContext.cs">
+      <Link>GameContext.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameContext.Desktop.cs">
+      <Link>GameContext.Desktop.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameContext.WindowsPhoneBackgroundXaml.cs">
+      <Link>GameContext.WindowsPhoneBackgroundXaml.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameContext.WinRT.cs">
+      <Link>GameContext.WinRT.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameContext.WinRTBackgroundXaml.cs">
+      <Link>GameContext.WinRTBackgroundXaml.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameContextType.cs">
+      <Link>GameContextType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameGraphicsParameters.cs">
+      <Link>GameGraphicsParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GamePlatform.cs">
+      <Link>GamePlatform.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameServiceRegistry.cs">
+      <Link>GameServiceRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameSystem.cs">
+      <Link>GameSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameSystemCollection.cs">
+      <Link>GameSystemCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameTime.cs">
+      <Link>GameTime.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameWindow.cs">
+      <Link>GameWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GameWindowRenderer.cs">
+      <Link>GameWindowRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GraphicsDeviceInformation.cs">
+      <Link>GraphicsDeviceInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\GraphicsDeviceManager.cs">
+      <Link>GraphicsDeviceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\IContentable.cs">
+      <Link>IContentable.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\IDrawable.cs">
+      <Link>IDrawable.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\IGamePlatform.cs">
+      <Link>IGamePlatform.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\IGameSystem.cs">
+      <Link>IGameSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\IGraphicsDeviceFactory.cs">
+      <Link>IGraphicsDeviceFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\IGraphicsDeviceManager.cs">
+      <Link>IGraphicsDeviceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\IUpdateable.cs">
+      <Link>IUpdateable.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\LaunchParameters.cs">
+      <Link>LaunchParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\NamespaceDoc.cs">
+      <Link>NamespaceDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\PreparingDeviceSettingsEventArgs.cs">
+      <Link>PreparingDeviceSettingsEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\WindowsPhone\GamePlatformPhone.cs">
+      <Link>WindowsPhone\GamePlatformPhone.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\WindowsPhone\GameWindowPhoneBackgroundXaml.cs">
+      <Link>WindowsPhone\GameWindowPhoneBackgroundXaml.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\WindowsPhone\GameWindowPhoneXaml.cs">
+      <Link>WindowsPhone\GameWindowPhoneXaml.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\WinRT\GamePlatformWinRT.cs">
+      <Link>WinRT\GamePlatformWinRT.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\WinRT\GameWindowWinRT.cs">
+      <Link>WinRT\GameWindowWinRT.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Game\WinRT\GameWindowWinRTXaml.cs">
+      <Link>WinRT\GameWindowWinRTXaml.cs</Link>
+    </Compile>
+    <EmbeddedResource Include="Properties\SharpDX.Toolkit.Game.Uwp.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpDX.Toolkit.Graphics.Uwp\SharpDX.Toolkit.Graphics.Uwp.csproj">
+      <Project>{049066ca-05c3-4629-b05b-547f3d0cb41b}</Project>
+      <Name>SharpDX.Toolkit.Graphics.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpDX.Toolkit.Uwp\SharpDX.Toolkit.Uwp.csproj">
+      <Project>{b56e3293-87af-46ba-b64c-b973c983d67f}</Project>
+      <Name>SharpDX.Toolkit.Uwp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

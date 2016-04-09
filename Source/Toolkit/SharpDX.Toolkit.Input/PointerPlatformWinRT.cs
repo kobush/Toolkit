@@ -18,8 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-using SharpDX.Mathematics;
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
 using System;
 using Windows.System;
 using Windows.UI.Core;

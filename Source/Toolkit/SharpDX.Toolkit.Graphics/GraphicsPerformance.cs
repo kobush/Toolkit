@@ -58,7 +58,7 @@ namespace SharpDX.Toolkit.Graphics
             }
             set
             {
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
                 PixHelper.AllowProfiling(value);
 #endif
                 allowProfiling = value;
@@ -89,7 +89,7 @@ namespace SharpDX.Toolkit.Graphics
         public void Begin(ColorBGRA color, string name)
         {
             if (!Enabled) return;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             PixHelper.BeginEvent(color, name);
 #endif
             // TODO Add code for Direct3D11.1 annotation API
@@ -104,7 +104,7 @@ namespace SharpDX.Toolkit.Graphics
         public void Begin(ColorBGRA color, string formatName, params object[] parameters)
         {
             if (!Enabled) return;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             PixHelper.BeginEvent(color, formatName, parameters);
 #endif
             // TODO Add code for Direct3D11.1 annotation API
@@ -128,7 +128,7 @@ namespace SharpDX.Toolkit.Graphics
         public void SetMarker(ColorBGRA color, string name)
         {
             if (!Enabled) return;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             PixHelper.SetMarker(color, name);
 #endif
             // TODO Add code for Direct3D11.1 annotation API
@@ -143,7 +143,7 @@ namespace SharpDX.Toolkit.Graphics
         public void SetMarker(ColorBGRA color, string formatName, params object[] parameters)
         {
             if (!Enabled) return;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             PixHelper.SetMarker(color, formatName, parameters);
 #endif
             // TODO Add code for Direct3D11.1 annotation API
@@ -155,7 +155,7 @@ namespace SharpDX.Toolkit.Graphics
         public void End()
         {
             if (!Enabled) return;
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             PixHelper.EndEvent();
 #endif
             // TODO Add code for Direct3D11.1 annotation API

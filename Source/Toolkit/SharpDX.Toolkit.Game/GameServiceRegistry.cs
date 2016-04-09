@@ -93,7 +93,7 @@ namespace SharpDX.Toolkit
             if (provider == null)
                 throw new ArgumentNullException("provider");
 
-#if WIN8METRO
+#if WIN8METRO || WINDOWS_UWP
             if (!type.GetTypeInfo().IsAssignableFrom(provider.GetType().GetTypeInfo()))
                 throw new ArgumentException(string.Format("Service [{0}] must be assignable to [{1}]", provider.GetType().FullName, type.GetType().FullName));
 #else

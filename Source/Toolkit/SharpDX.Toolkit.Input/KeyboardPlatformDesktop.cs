@@ -18,13 +18,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using FormsKeys = System.Windows.Forms.Keys;
 
-#if !W8CORE && NET35Plus && !DIRECTX11_1
+#if !W8CORE && !WINDOWS_UWP && NET35Plus && !DIRECTX11_1
 using WpfKeys = System.Windows.Input.Key;
 #endif
 

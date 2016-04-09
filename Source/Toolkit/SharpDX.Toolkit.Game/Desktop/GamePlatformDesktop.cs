@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
 using System;
 using System.IO;
 using System.Reflection;

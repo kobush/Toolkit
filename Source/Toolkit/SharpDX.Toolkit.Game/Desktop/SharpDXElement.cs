@@ -20,7 +20,7 @@
 
 using System.Threading;
 
-#if !W8CORE && NET35Plus
+#if !W8CORE && !WINDOWS_UWP && NET35Plus
 
 namespace SharpDX.Toolkit
 {

@@ -105,7 +105,7 @@ namespace SharpDX.Toolkit.Audio
 
         public void Dispose()
         {
-#if !NET35Plus
+#if !NET35Plus && !WINDOWS_UWP
             reader.Close();
 #else
             reader.Dispose();

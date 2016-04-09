@@ -17,14 +17,14 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-#if W8CORE
+#if W8CORE || WINDOWS_UWP
 using SharpDX.Toolkit.Graphics;
 
 namespace SharpDX.Toolkit
 {
     public partial class EffectCompilerSystem
     {
-        #region Methods
+    #region Methods
 
         private void InitializeCompiler()
         {
@@ -43,7 +43,7 @@ namespace SharpDX.Toolkit
             effectsToAlwaysCheck.Remove(effect);
         }
 
-        #endregion
+    #endregion
     }
 }
 #endif

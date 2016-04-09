@@ -53,15 +53,15 @@ namespace SharpDX.Toolkit.Input
         internal static MousePlatform Create(object nativeWindow)
         {
             if (nativeWindow == null) throw new ArgumentNullException("nativeWindow");
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             if (nativeWindow is System.Windows.Forms.Control || nativeWindow is IntPtr)
                 return new MousePlatformDesktop(nativeWindow); // WinForms platform
-#if !W8CORE && NET35Plus && !DIRECTX11_1
+#if !W8CORE && !WINDOWS_UWP && NET35Plus && !DIRECTX11_1
             if (nativeWindow is SharpDXElement)
                 return new MousePlatformDesktopWpf(nativeWindow); // WPF platform
 #endif
             throw new ArgumentException("Unsupported window control.", "nativeWindow");
-#elif WIN8METRO
+#elif WIN8METRO || WINDOWS_UWP
             return new MousePlatformWinRT(nativeWindow); // WinRT platform
 #else
             throw new NotSupportedException("This functionality is not supported on current platform."); // no other platforms are supported at this time

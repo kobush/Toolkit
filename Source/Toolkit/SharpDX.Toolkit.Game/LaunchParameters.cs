@@ -33,7 +33,7 @@ namespace SharpDX.Toolkit
         /// </summary>
         public LaunchParameters()
         {
-#if !W8CORE
+#if !W8CORE && !WINDOWS_UWP
             var args = Environment.GetCommandLineArgs();
 
             if (args.Length > 1)

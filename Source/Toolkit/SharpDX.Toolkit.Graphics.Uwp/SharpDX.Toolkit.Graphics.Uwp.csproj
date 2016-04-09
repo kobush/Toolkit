@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{049066CA-05C3-4629-B05B-547F3D0CB41B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpDX.Toolkit.Graphics</RootNamespace>
+    <AssemblyName>SharpDX.Toolkit.Graphics</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;DIRECTX11_1;DIRECTX11_2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <DocumentationFile>bin\Debug\SharpDX.Toolkit.Graphics.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;DIRECTX11_1;DIRECTX11_2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <DocumentationFile>bin\Release\SharpDX.Toolkit.Graphics.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="..\SharpDX.Toolkit.Graphics\GraphicsClassDiagram.cd">
+      <Link>GraphicsClassDiagram.cd</Link>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\Common.fxh">
+      <Link>StockEffects\HLSL\Common.fxh</Link>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\CompileEffects.bat">
+      <Link>StockEffects\HLSL\CompileEffects.bat</Link>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\Lighting.fxh">
+      <Link>StockEffects\HLSL\Lighting.fxh</Link>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\Macros.fxh">
+      <Link>StockEffects\HLSL\Macros.fxh</Link>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\Structures.fxh">
+      <Link>StockEffects\HLSL\Structures.fxh</Link>
+    </None>
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\AssemblyDoc.cs">
+      <Link>AssemblyDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\BasicEffect.Extensions.cs">
+      <Link>BasicEffect.Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\BasicEffectInstaller.cs">
+      <Link>BasicEffectInstaller.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\BlendState.cs">
+      <Link>BlendState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\BlendStateCollection.cs">
+      <Link>BlendStateCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.Argument.cs">
+      <Link>Buffer.Argument.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.Constant.cs">
+      <Link>Buffer.Constant.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.cs">
+      <Link>Buffer.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.Index.cs">
+      <Link>Buffer.Index.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.Raw.cs">
+      <Link>Buffer.Raw.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.Structured.cs">
+      <Link>Buffer.Structured.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.Typed.cs">
+      <Link>Buffer.Typed.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Buffer.Vertex.cs">
+      <Link>Buffer.Vertex.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\BufferCollection.cs">
+      <Link>BufferCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\BufferFlags.cs">
+      <Link>BufferFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ClearOptions.cs">
+      <Link>ClearOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DDS.cs">
+      <Link>DDS.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DDSFlags.cs">
+      <Link>DDSFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DDSHelper.cs">
+      <Link>DDSHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DepthFormat.cs">
+      <Link>DepthFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DepthStencilBuffer.cs">
+      <Link>DepthStencilBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DepthStencilState.cs">
+      <Link>DepthStencilState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DepthStencilStateCollection.cs">
+      <Link>DepthStencilStateCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DepthStencilViewSelector.cs">
+      <Link>DepthStencilViewSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\DisplayMode.cs">
+      <Link>DisplayMode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Effect.cs">
+      <Link>Effect.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectConstantBuffer.cs">
+      <Link>EffectConstantBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectConstantBufferCollection.cs">
+      <Link>EffectConstantBufferCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectConstantBufferKey.cs">
+      <Link>EffectConstantBufferKey.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectContentReader.cs">
+      <Link>EffectContentReader.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectDefaultParameters.cs">
+      <Link>EffectDefaultParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectDefaultParametersContext.cs">
+      <Link>EffectDefaultParametersContext.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectInstallerBase.cs">
+      <Link>EffectInstallerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectParameter.cs">
+      <Link>EffectParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectParameterCollection.cs">
+      <Link>EffectParameterCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectPass.cs">
+      <Link>EffectPass.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectPassCollection.cs">
+      <Link>EffectPassCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectPool.cs">
+      <Link>EffectPool.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectResourceLinker.cs">
+      <Link>EffectResourceLinker.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectResourceType.cs">
+      <Link>EffectResourceType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectTechnique.cs">
+      <Link>EffectTechnique.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\EffectTechniqueCollection.cs">
+      <Link>EffectTechniqueCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.cs">
+      <Link>GeometricPrimitive.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.Cube.cs">
+      <Link>GeometricPrimitive.Cube.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.Cylinder.cs">
+      <Link>GeometricPrimitive.Cylinder.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.GeoSphere.cs">
+      <Link>GeometricPrimitive.GeoSphere.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.Plane.cs">
+      <Link>GeometricPrimitive.Plane.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.Sphere.cs">
+      <Link>GeometricPrimitive.Sphere.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.Teapot.cs">
+      <Link>GeometricPrimitive.Teapot.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GeometricPrimitive.Torus.cs">
+      <Link>GeometricPrimitive.Torus.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsAdapter.cs">
+      <Link>GraphicsAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsDevice.cs">
+      <Link>GraphicsDevice.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsDeviceFeatures.cs">
+      <Link>GraphicsDeviceFeatures.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsDeviceStatus.cs">
+      <Link>GraphicsDeviceStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsOutput.cs">
+      <Link>GraphicsOutput.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsPerformance.cs">
+      <Link>GraphicsPerformance.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsPresenter.cs">
+      <Link>GraphicsPresenter.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsResource.cs">
+      <Link>GraphicsResource.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\GraphicsResourceContentReaderBase.cs">
+      <Link>GraphicsResourceContentReaderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\IEffectInstaller.cs">
+      <Link>IEffectInstaller.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\IGraphicsDeviceService.cs">
+      <Link>IGraphicsDeviceService.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Image.cs">
+      <Link>Image.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ImageContentReader.cs">
+      <Link>ImageContentReader.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ImageDescription.cs">
+      <Link>ImageDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ImageFileType.cs">
+      <Link>ImageFileType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\InputSignatureKey.cs">
+      <Link>InputSignatureKey.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\InputSignatureManager.cs">
+      <Link>InputSignatureManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\IPixelData.cs">
+      <Link>IPixelData.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Material.cs">
+      <Link>Material.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\MaterialCollection.cs">
+      <Link>MaterialCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\MaterialTexture.cs">
+      <Link>MaterialTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\MaterialTextureStack.cs">
+      <Link>MaterialTextureStack.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\MipMapCount.cs">
+      <Link>MipMapCount.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\MipMapDescription.cs">
+      <Link>MipMapDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Model.cs">
+      <Link>Model.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelAnimation.cs">
+      <Link>ModelAnimation.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelAnimationCollection.cs">
+      <Link>ModelAnimationCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelBone.cs">
+      <Link>ModelBone.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelBoneCollection.cs">
+      <Link>ModelBoneCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelBufferRange.cs">
+      <Link>ModelBufferRange.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelContentReader.cs">
+      <Link>ModelContentReader.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelContentReaderOptions.cs">
+      <Link>ModelContentReaderOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelEffectCollection.cs">
+      <Link>ModelEffectCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelMesh.cs">
+      <Link>ModelMesh.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelMeshCollection.cs">
+      <Link>ModelMeshCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelMeshPart.cs">
+      <Link>ModelMeshPart.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelMeshPartCollection.cs">
+      <Link>ModelMeshPartCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelReader.cs">
+      <Link>ModelReader.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelSkinnedBone.cs">
+      <Link>ModelSkinnedBone.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ModelSkinnedBoneCollection.cs">
+      <Link>ModelSkinnedBoneCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\MSAALevel.cs">
+      <Link>MSAALevel.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\NamespaceDoc.cs">
+      <Link>NamespaceDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\OcclusionQuery.cs">
+      <Link>OcclusionQuery.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PixelBuffer.cs">
+      <Link>PixelBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PixelBufferArray.cs">
+      <Link>PixelBufferArray.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PixelData.cs">
+      <Link>PixelData.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PixelFormat.cs">
+      <Link>PixelFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PresentationParameters.cs">
+      <Link>PresentationParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PresentInterval.cs">
+      <Link>PresentInterval.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PrimitiveBatch.cs">
+      <Link>PrimitiveBatch.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PrimitiveBatchBase.cs">
+      <Link>PrimitiveBatchBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PrimitiveQuad.cs">
+      <Link>PrimitiveQuad.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\PrimitiveType.cs">
+      <Link>PrimitiveType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RasterizerState.cs">
+      <Link>RasterizerState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RasterizerStateCollection.cs">
+      <Link>RasterizerStateCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RenderTarget1D.cs">
+      <Link>RenderTarget1D.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RenderTarget2D.cs">
+      <Link>RenderTarget2D.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RenderTarget3D.cs">
+      <Link>RenderTarget3D.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RenderTargetCube.cs">
+      <Link>RenderTargetCube.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RenderTargetGraphicsPresenter.cs">
+      <Link>RenderTargetGraphicsPresenter.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\RenderTargetViewSelector.cs">
+      <Link>RenderTargetViewSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SamplerState.cs">
+      <Link>SamplerState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SamplerStateCollection.cs">
+      <Link>SamplerStateCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SetDataOptions.cs">
+      <Link>SetDataOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ShaderResourceViewSelector.cs">
+      <Link>ShaderResourceViewSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SharedDataType.cs">
+      <Link>SharedDataType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SkinnedEffectInstaller.cs">
+      <Link>SkinnedEffectInstaller.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SpriteBatch.cs">
+      <Link>SpriteBatch.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SpriteEffects.cs">
+      <Link>SpriteEffects.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SpriteFont.cs">
+      <Link>SpriteFont.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SpriteFontContentReader.cs">
+      <Link>SpriteFontContentReader.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SpriteSortMode.cs">
+      <Link>SpriteSortMode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StateCollectionBase.cs">
+      <Link>StateCollectionBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\AlphaTestEffect.cs">
+      <Link>StockEffects\CSharp\AlphaTestEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\BasicEffect.cs">
+      <Link>StockEffects\CSharp\BasicEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\DirectionalLight.cs">
+      <Link>StockEffects\CSharp\DirectionalLight.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\DualTextureEffect.cs">
+      <Link>StockEffects\CSharp\DualTextureEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\EffectHelpers.cs">
+      <Link>StockEffects\CSharp\EffectHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\EnvironmentMapEffect.cs">
+      <Link>StockEffects\CSharp\EnvironmentMapEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\IEffectFog.cs">
+      <Link>StockEffects\CSharp\IEffectFog.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\IEffectLights.cs">
+      <Link>StockEffects\CSharp\IEffectLights.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\IEffectMatrices.cs">
+      <Link>StockEffects\CSharp\IEffectMatrices.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\C#\SkinnedEffect.cs">
+      <Link>StockEffects\CSharp\SkinnedEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\AlphaTestEffect.ByteCode.cs">
+      <Link>StockEffects\HLSL\AlphaTestEffect.ByteCode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\BasicEffect.ByteCode.cs">
+      <Link>StockEffects\HLSL\BasicEffect.ByteCode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\DualTextureEffect.ByteCode.cs">
+      <Link>StockEffects\HLSL\DualTextureEffect.ByteCode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\EnvironmentMapEffect.ByteCode.cs">
+      <Link>StockEffects\HLSL\EnvironmentMapEffect.ByteCode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\PrimitiveQuad.cs">
+      <Link>StockEffects\HLSL\PrimitiveQuad.cs</Link>
+      <DependentUpon>PrimitiveQuad.fx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\SkinnedEffect.ByteCode.cs">
+      <Link>StockEffects\HLSL\SkinnedEffect.ByteCode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\SpriteBatch.ByteCode.cs">
+      <Link>StockEffects\HLSL\SpriteBatch.ByteCode.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\SwapChainGraphicsPresenter.cs">
+      <Link>SwapChainGraphicsPresenter.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Texture.cs">
+      <Link>Texture.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Texture1D.cs">
+      <Link>Texture1D.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Texture1DBase.cs">
+      <Link>Texture1DBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Texture2D.cs">
+      <Link>Texture2D.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Texture2DBase.cs">
+      <Link>Texture2DBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Texture3D.cs">
+      <Link>Texture3D.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\Texture3DBase.cs">
+      <Link>Texture3DBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TextureContentReader.cs">
+      <Link>TextureContentReader.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TextureCube.cs">
+      <Link>TextureCube.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TextureDescription.cs">
+      <Link>TextureDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TextureDimension.cs">
+      <Link>TextureDimension.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TextureFlags.cs">
+      <Link>TextureFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TextureKeys.cs">
+      <Link>TextureKeys.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TextureView.cs">
+      <Link>TextureView.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\TGAHelper.cs">
+      <Link>TGAHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\UnorderedAccessViewSelector.cs">
+      <Link>UnorderedAccessViewSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\VertexBufferBinding.cs">
+      <Link>VertexBufferBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\VertexBufferBindingCollection.cs">
+      <Link>VertexBufferBindingCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\VertexInputLayout.cs">
+      <Link>VertexInputLayout.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\VertexPositionColor.cs">
+      <Link>VertexPositionColor.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\VertexPositionColorTexture.cs">
+      <Link>VertexPositionColorTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\VertexPositionNormalTexture.cs">
+      <Link>VertexPositionNormalTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\VertexPositionTexture.cs">
+      <Link>VertexPositionTexture.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\ViewType.cs">
+      <Link>ViewType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\WICFlags.cs">
+      <Link>WICFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Graphics\WICHelper.cs">
+      <Link>WICHelper.cs</Link>
+    </Compile>
+    <EmbeddedResource Include="Properties\SharpDX.Toolkit.Graphics.Uwp.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpDX.Toolkit.Uwp\SharpDX.Toolkit.Uwp.csproj">
+      <Project>{b56e3293-87af-46ba-b64c-b973c983d67f}</Project>
+      <Name>SharpDX.Toolkit.Uwp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\AlphaTestEffect.fx">
+      <Link>StockEffects\HLSL\AlphaTestEffect.fx</Link>
+      <LastGenOutput>AlphaTestEffect.ByteCode.cs</LastGenOutput>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\BasicEffect.fx">
+      <Link>StockEffects\HLSL\BasicEffect.fx</Link>
+      <LastGenOutput>BasicEffect.ByteCode.cs</LastGenOutput>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\DualTextureEffect.fx">
+      <Link>StockEffects\HLSL\DualTextureEffect.fx</Link>
+      <LastGenOutput>DualTextureEffect.ByteCode.cs</LastGenOutput>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\EnvironmentMapEffect.fx">
+      <Link>StockEffects\HLSL\EnvironmentMapEffect.fx</Link>
+      <LastGenOutput>EnvironmentMapEffect.ByteCode.cs</LastGenOutput>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\PrimitiveQuad.fx">
+      <Link>StockEffects\HLSL\PrimitiveQuad.fx</Link>
+      <LastGenOutput>PrimitiveQuad.cs</LastGenOutput>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\SkinnedEffect.fx">
+      <Link>StockEffects\HLSL\SkinnedEffect.fx</Link>
+      <LastGenOutput>SkinnedEffect.ByteCode.cs</LastGenOutput>
+    </None>
+    <None Include="..\SharpDX.Toolkit.Graphics\StockEffects\HLSL\SpriteEffect.fx">
+      <Link>StockEffects\HLSL\SpriteEffect.fx</Link>
+      <LastGenOutput>SpriteEffect.ByteCode.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

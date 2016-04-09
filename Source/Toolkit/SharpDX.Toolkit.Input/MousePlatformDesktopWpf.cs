@@ -18,8 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-using SharpDX.Mathematics;
-#if !W8CORE && NET35Plus && !DIRECTX11_1
+#if !W8CORE && !WINDOWS_UWP && NET35Plus && !DIRECTX11_1
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Input;

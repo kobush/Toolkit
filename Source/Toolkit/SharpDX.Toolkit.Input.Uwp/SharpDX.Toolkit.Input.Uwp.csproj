@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFAD4644-7527-47AD-A346-C08BE358C3F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpDX.Toolkit.Input</RootNamespace>
+    <AssemblyName>SharpDX.Toolkit.Input</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UWP;DIRECTX11_1;DIRECTX11_2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <DocumentationFile>bin\Debug\SharpDX.Toolkit.Input.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP;DIRECTX11_1;DIRECTX11_2</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateLibraryLayout>true</GenerateLibraryLayout>
+    <DocumentationFile>bin\Release\SharpDX.Toolkit.Input.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\AssemblyDoc.cs">
+      <Link>AssemblyDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\ButtonState.cs">
+      <Link>ButtonState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\ButtonStateFlags.cs">
+      <Link>ButtonStateFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\IKeyboardService.cs">
+      <Link>IKeyboardService.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\IMouseService.cs">
+      <Link>IMouseService.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\IPointerService.cs">
+      <Link>IPointerService.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\KeyboardManager.cs">
+      <Link>KeyboardManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\KeyboardPlatform.cs">
+      <Link>KeyboardPlatform.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\KeyboardPlatformDesktop.cs">
+      <Link>KeyboardPlatformDesktop.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\KeyboardPlatformDesktopWpf.cs">
+      <Link>KeyboardPlatformDesktopWpf.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\KeyboardPlatformWinRT.cs">
+      <Link>KeyboardPlatformWinRT.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\KeyboardState.cs">
+      <Link>KeyboardState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\KeyModifiers.cs">
+      <Link>KeyModifiers.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\Keys.cs">
+      <Link>Keys.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\MouseButton.cs">
+      <Link>MouseButton.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\MouseManager.cs">
+      <Link>MouseManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\MousePlatform.cs">
+      <Link>MousePlatform.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\MousePlatformDesktop.cs">
+      <Link>MousePlatformDesktop.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\MousePlatformDesktopWpf.cs">
+      <Link>MousePlatformDesktopWpf.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\MousePlatformWinRt.cs">
+      <Link>MousePlatformWinRt.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\MouseState.cs">
+      <Link>MouseState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\NamespaceDoc.cs">
+      <Link>NamespaceDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerDeviceType.cs">
+      <Link>PointerDeviceType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerEventType.cs">
+      <Link>PointerEventType.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerManager.cs">
+      <Link>PointerManager.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerPlatform.cs">
+      <Link>PointerPlatform.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerPlatformDesktop.cs">
+      <Link>PointerPlatformDesktop.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerPlatformDesktopTouch.cs">
+      <Link>PointerPlatformDesktopTouch.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerPlatformDesktopWpf.cs">
+      <Link>PointerPlatformDesktopWpf.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerPlatformWinRT.cs">
+      <Link>PointerPlatformWinRT.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerPlatformWP8.cs">
+      <Link>PointerPlatformWP8.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerPoint.cs">
+      <Link>PointerPoint.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerState.cs">
+      <Link>PointerState.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\PointerUpdateKind.cs">
+      <Link>PointerUpdateKind.cs</Link>
+    </Compile>
+    <Compile Include="..\SharpDX.Toolkit.Input\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <EmbeddedResource Include="Properties\SharpDX.Toolkit.Input.Uwp.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpDX.Toolkit.Game.Uwp\SharpDX.Toolkit.Game.Uwp.csproj">
+      <Project>{4abaa844-2feb-48d1-9caf-ed6d2a95bf37}</Project>
+      <Name>SharpDX.Toolkit.Game.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpDX.Toolkit.Graphics.Uwp\SharpDX.Toolkit.Graphics.Uwp.csproj">
+      <Project>{049066ca-05c3-4629-b05b-547f3d0cb41b}</Project>
+      <Name>SharpDX.Toolkit.Graphics.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpDX.Toolkit.Uwp\SharpDX.Toolkit.Uwp.csproj">
+      <Project>{b56e3293-87af-46ba-b64c-b973c983d67f}</Project>
+      <Name>SharpDX.Toolkit.Uwp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
